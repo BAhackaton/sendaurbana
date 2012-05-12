@@ -1,0 +1,59 @@
+/*
+ * Add your Stylesheet contents here
+ */
+#titlebar {
+	
+}
+#stage {
+	height: 235px;
+	width: 240px;
+	overflow: hidden;
+}
+
+#toc {
+	height: 235px;
+	width: 224px;
+}
+
+#scratchpad {
+	text-align: center;
+	padding-top: 25px;
+	height: 210px;
+	width: 238px;
+	border:1px solid #ced3c6;
+	border-width:0px 1px 1px 1px;
+}
+
+#slider {
+	-webkit-transition: margin-left 0.5s linear;
+}
+
+#subtitle {	
+	background:#808080;
+	color:#fff;
+	width:100%;
+	padding:2px 8px 0px  8px;
+	height:22px;
+	font-weight:bold
+}
+
+#loader {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.show_toc {
+	margin-left: 0px;
+}
+
+.show_scratchpad {
+	margin-left: -240px;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>    	
+		<link rel="stylesheet" href="../../css/style.css" type="text/css" />		
+		<script type="text/javascript" src="mapwrapper.js"></script>
+            <link rel="stylesheet" href="../../css/base_s40.css" type="text/css" />
+
+             <style type="text/css">
+      .sect {
+	width:100%;
+	border: solid 1px;
+	background-color:#ECDD49;
+	height: 30px;
+	background-image: url(../../img/fondo-splash01.png);
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: oblique;
+	word-spacing: 1em;
+	letter-spacing: 2px;
+	text-align: center;
+	text-indent: 10px;
+      }
+      
+      .fold {
+        -webkit-transition: height 0.3s linear;
+        width:100%;
+        background-color:#E9EBE6;
+        overflow:hidden;
+      }
+      
+      .hide-transition {
+        height:0px;
+      }
+ 
+      .show-transition {
+        height:75px;
+      }
+ 
+	  .leftcolumn { float: left}
+	  .rightcolumn { float: right}
+     </style>
+ 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Ovi Maps Rendering API example</title>
+    </head>
+    <body onload="init();">
+    
+        <div class="header_background">
+      <table summary="BiciSendas - Inicio" class="header_table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="app_name">BiciSendas 1.0 - Inicio</td>
+        </tr>
+      </table>
+    </div>
+    
+        <script type="text/javascript">  
+            // This is called when the page is loaded
+            function init() {				
+				// Check if the device supports HTML5 geolocation
+                if (!(navigator && navigator.geolocation)) {
+					// If geolocation is not supported, use default coordinates
+                    setMap({ coords : { latitude : "61.4988", longitude : "23.7637" }});									
+                } 
+				
+				else {
+					// If geolocation is supported, use the provided location
+					// if the location request fails, call error callback
+                    navigator.geolocation.getCurrentPosition(setMap, positionError);						
+                }				
+            }
+            
+			// Function to update map to DOM (id: container) background			
+            function setMap(position) {
+                
+                var target = document.getElementById("container");	
+                target.innerHTML = "";	
+                
+				// Set CSS background image by using OviMap class
+				// Note the use of getCSSUrl() to get formatted url for use in CSS
+                target.style.backgroundImage = new OviMap({
+                    center : { lat : position.coords.latitude , lon : position.coords.longitude }, 
+                    zoom : 12, 
+                    size : { width : 220, height : 220 } 
+                }).getCSSUrl();                							            
+            }
+			
+			function positionError(error){
+				// Replace "loading" text with the error message 
+                var target = document.getElementById("container");
+                target.innerHTML = error.message;	
+                target.style.backgroundImage = "";				
+			}
+      				   
+			
+			function updateMap(){
+				var selList = document.getElementById("selectList");
+				switch(selList.options[selList.selectedIndex].value){
+				case "RETIRO":setMap({ coords : { latitude : "-34.592308", longitude : "-58.37501" }});break;
+				case "ADUANA":setMap({ coords : { latitude : "-34.611365", longitude : "-58.369077" }});break;
+				case "DERECHO":setMap({ coords : { latitude : "-34.583669", longitude : "-58.391243" }});break;
+				case "PLAZA ROMA":setMap({ coords : { latitude : "-34.601599", longitude : "-58.369421" }});break;
+				case "PLAZA ITALIA":setMap({ coords : { latitude : "-34.580224", longitude : "-58.420751" }});break;
+				case "PARQUE LEZAMA":setMap({ coords : { latitude : "-34.628017", longitude : "-58.369853" }});break;
+				case "OBELISCO":setMap({ coords : { latitude : "-34.606297", longitude : "-58.381051" }});break;
+				case "CONGRESO":setMap({ coords : { latitude : "-34.609829", longitude : "-58.389289" }});break;
+				case "PARQUE LAS HERAS":setMap({ coords : { latitude : "-34.58503", longitude : "-58.407637" }});break;
+				case "UCA PUERTO MADERO":setMap({ coords : { latitude : "-34.615974", longitude : "-58.365666" }});break;
+				case "TRIBUNALES":setMap({ coords : { latitude : "-34.601342", longitude : "-58.385008" }});break;
+				case "PLAZA VICENTE LOPEZ":setMap({ coords : { latitude : "-34.593367", longitude : "-58.389698" }});break;
+				case "ONCE":setMap({ coords : { latitude : "-34.609475", longitude : "-58.407615" }});break;
+				case "PACIFICO":setMap({ coords : { latitude : "-34.577468", longitude : "-58.426158" }});break;
+				case "VIRREY CEVALLOS":setMap({ coords : { latitude : "-34.622755", longitude : "-58.388947" }});break;
+				case "PLAZA HOUSSAY":setMap({ coords : { latitude : "-34.59902", longitude : "-58.398217" }});break;
+				case "PLAZA DE MAYO":setMap({ coords : { latitude : "-34.609917", longitude : "-58.374721" }});break;
+				case "PLAZA ALMAGRO":setMap({ coords : { latitude : "-34.605926", longitude : "-58.419482" }});break;
+				case "CMD":setMap({ coords : { latitude : "-34.654286", longitude : "-58.380429" }});break;
+				case "INDEPENDENCIA":setMap({ coords : { latitude : "-34.617908", longitude : "-58.38047" }});break;
+				case "PLAZA SAN MARTIN":setMap({ coords : { latitude : "-34.594958", longitude : "-58.378283" }});break;
+
+						
+					case "my":
+						init();
+						break;
+					default:
+						init();
+						break;
+				}				
+			}
+        </script>
+
+        
+		<!-- Options menu for selecting the displayed map -->
+		<div class="navi">
+			<select id="selectList" onchange="updateMap();">
+				<option value="my">MI UBICACIÓN</option>
+				<option value="RETIRO">RETIRO</option>
+				
+				<option value="ADUANA">ADUANA</option><option value="DERECHO">DERECHO</option><option value="PLAZA ROMA">PLAZA ROMA</option><option value="PLAZA ITALIA">PLAZA ITALIA</option><option value="PARQUE LEZAMA">PARQUE LEZAMA</option><option value="OBELISCO">OBELISCO</option><option value="PARQUE ROCA">PARQUE ROCA</option><option value="PARQUE DE LOS NIÃ‘OS">PARQUE DE LOS NIÃ‘OS</option><option value="BICIS DE MUESTRA">BICIS DE MUESTRA</option><option value="CONGRESO">CONGRESO</option><option value="PARQUE LAS HERAS">PARQUE LAS HERAS</option><option value="UCA PUERTO MADERO">UCA PUERTO MADERO</option><option value="TRIBUNALES">TRIBUNALES</option><option value="PLAZA VICENTE LOPEZ">PLAZA VICENTE LOPEZ</option><option value="ONCE">ONCE</option><option value="PACIFICO">PACIFICO</option><option value="VIRREY CEVALLOS">VIRREY CEVALLOS</option><option value="PLAZA HOUSSAY">PLAZA HOUSSAY</option><option value="PLAZA DE MAYO">PLAZA DE MAYO</option><option value="PLAZA ALMAGRO">PLAZA ALMAGRO</option><option value="CMD">CMD</option><option value="INDEPENDENCIA">INDEPENDENCIA</option><option value="PLAZA SAN MARTIN">PLAZA SAN MARTIN</option>	
+				
+					</select>		
+		</div>
+		
+		<!-- Container DOM -->
+        <div id="container"></div>
+						
+    </body>
+</html>

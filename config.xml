@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+xmlns:NOKIA="http://www.ovi.com/widgetservice"
+        id="http://SendaUrbana"
+        version="1">
+
+    <name short="SendaUrbana">SendaUrbana</name>
+
+    <description>Top stories of the day.</description>
+
+    <content src="index.html"/>
+    
+    <icon src="img/icon.png"/>
+
+    <!-- Note: Feed URL MUST BE Url encoded 
+         @see http://en.wikipedia.org/wiki/Percent-encoding -->
+    <preference name = "feedURLRSS"
+                value = "http://feeds2.feedburner.com/time/topstories"
+                readonly = "true"/>
+
+    <feature name="nokia://s40.nokia.com/SAWRT/1.5" required="true" />
+
+    <!-- Note: Author href MUST BE Url encoded 
+         @see http://en.wikipedia.org/wiki/Percent-encoding -->
+    <author email="john.doe@example.com" href="http://www.example.com">
+        John Doe
+    </author>
+
+    <license>
+        Copyright Foo Bar Corp, 2011.
+    </license>
+</widget>

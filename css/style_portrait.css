@@ -1,0 +1,134 @@
+/*Generic Style*/
+body{
+	background-color:#D6D8D6;
+	width:240px;
+	padding:0px;
+	margin:0px;
+	font-family:arial;
+}
+table,td,tr,div,span{
+	font-family:arial;
+	color:#3F3F3F
+}
+.greySep{
+	border-top:1px solid grey;
+	height:9px
+}
+/*End Generic Style*/
+
+/*Text alignment Style*/
+.alignR{text-align:right}
+.alignC{text-align:center}
+.valignTp{vertical-align:top}
+/*End Text alignment Style*/
+.verHorloader{margin-left:90px;margin-top:100px}
+.navBar{
+    width:100%;background:url(../img/nav_bg.png) 0px 0px repeat-x;height:24px
+}
+.navBar_dis{
+    width:120px;background:url(../img/nav_bg_dis.png) 0px 0px repeat-x;height:24px
+}
+.navBar_sep{border-right:1px solid #D6D8D6}
+.w45{width:45px}
+.content{padding:8px 4px 8px 8px}
+#main{width:100%;margin-left:auto;margin-right:auto}
+.entry {
+	width:100%;
+}
+.entry a{
+	color: #850001;
+}
+
+.headline{
+	font-weight: bold;
+	font-size:small;
+	color:#3F3F3F;
+}
+.headlinePic{
+	width: 75px;
+	padding-right:8px;
+	vertical-align: top;
+}
+
+.headlineDesc{	
+	font-size:small;
+}
+.pubDate{
+	margin:8px 0px;
+	font-size: small;
+	color: grey;
+}
+.horstrip{
+    width:2500px;
+}
+
+.hortransition{
+    -webkit-transition:margin-left 0.5s linear;
+}
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}
+.nav{
+    width: 100%;
+}
+/*Slider CSS*/
+.horContainer{overflow: hidden;}
+.horEntry{width: 228px;padding:8px 4px 8px 8px}
+
+.entry0 {margin-left:0px;}
+.entry1 {margin-left:-240px;}
+.entry2 {margin-left:-480px;}
+.entry3 {margin-left:-720px;}
+.entry4 {margin-left:-960px;}
+.entry5 {margin-left:-1200px;}
+.entry6 {margin-left:-1440px;}
+.entry7 {margin-left:-1680px;}
+.entry8 {margin-left:-1920px;}
+.entry9 {margin-left:-2160px;}
+/*End Slider CSS*/
+.cat{
+	width: 120px;
+	height: 50px;
+}
+.container{
+	margin-left: auto;
+  	margin-right: auto;
+	width:240px;
+	overflow:hidden;
+	vertical-align: top;
+}
+.strip{
+	-webkit-transition:margin-left 0.5s linear;
+}
+.pubDate_contnr{
+	width: 100%;
+	font-size: small;
+	background-color: #9E9FA0;
+}
+.pubDate_txt{
+	color: #fff;
+	padding:3px 8px 7px  3px;
+	height:14px;
+}
+#views{
+	height:870px;
+}
+#catview{
+	width:240px; height:300px;
+}
+#verviewcontainer,#horview{
+	width:240px;
+	height:870px;
+}
+#horview{
+	margin-left: 240px;
+	margin-top: -870px;
+}
+
+.view0 {margin-left:0px;}
+.view1 {margin-left:0px;}
+.view2 {margin-left:-240px;} 
+.header_contnr{height:40px;background:#CF2030;width:240px}

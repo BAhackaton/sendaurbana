@@ -1,0 +1,141 @@
+/*Generic Style*/
+body{
+	background-color:#D6D8D6;
+	width:320px;
+	padding:0px;
+	margin:0px;
+}
+table,td,tr,div,span{
+	font-family:arial;
+	color:#3F3F3F
+}
+.greySep{
+	border-top:1px solid grey;
+	height:9px
+}
+/*End Generic Style*/
+/*Text alignment Style*/
+.alignR{text-align:right}
+.alignC{text-align:center}
+.valignTp{vertical-align:top}
+/*End Text alignment Style*/
+.verHorloader{margin-left:90px;margin-top:100px}
+.navBar{
+    width:100%;background:url(../img/nav_bg.png) 0px 0px repeat-x;height:24px
+}
+.navBar_dis{
+    width:50%;background:url(../img/nav_bg_dis.png) 0px 0px repeat-x;height:24px
+}
+.navBar_sep{border-right:1px solid #D6D8D6}
+.w45{width:45px}
+.content{padding:8px 4px 8px 8px}
+#main{width:100%;margin-left:auto;margin-right:auto}
+.entry {
+	width:100%;
+}
+.entry a{
+	color: #850001;
+}
+
+.headline{
+	font-weight: bold;
+	font-size:small;
+	color:#3F3F3F
+}
+.headlinePic{
+	width: 75px;
+	padding-right:8px;
+	vertical-align: top;
+	padding-bottom:10px
+}
+
+.headlineDesc{
+	font-size:small;
+}
+.pubDate{
+	margin:8px 0px;
+	font-size: small;
+	color: grey;
+}
+.horstrip{
+    width:2500px;
+}
+
+.hortransition{
+    -webkit-transition:margin-left 0.5s linear;
+}
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}
+
+.nav{
+    width: 100%;
+}
+
+/*Slider CSS*/
+.horContainer{overflow: hidden;}
+.horEntry{width: 308px;padding:8px 4px 8px 8px}
+
+.entry0 {margin-left:0px;}
+.entry1 {margin-left:-320px;}
+.entry2 {margin-left:-640px;}
+.entry3 {margin-left:-960px;}
+.entry4 {margin-left:-1280px;}
+.entry5 {margin-left:-1600px;}
+.entry6 {margin-left:-1920px;}
+.entry7 {margin-left:-2240px;}
+.entry8 {margin-left:-2560px;}
+.entry9 {margin-left:-2880px;}
+/*End Slider CSS*/
+.cat{
+	width: 120px;
+	height: 50px;
+}
+.container{
+	margin-left: auto;
+  	margin-right: auto;
+	width:320px;
+	overflow:hidden;
+	vertical-align: top;
+}
+
+.strip{
+	-webkit-transition:margin-left 0.5s linear;
+}
+.pubDate_contnr{
+	width: 100%;
+	font-size: small;
+	background-color: #9E9FA0;
+}
+.pubDate_txt{
+	color: #fff;
+	padding:3px 8px 7px  3px;
+	height:14px;
+}
+#views{
+	height:820px;
+}
+
+#catview{
+	width:320px; height:300px;
+}
+
+#verviewcontainer,#horview{
+	width:320px;
+	height:820px;
+}
+
+#horview{
+	margin-left: 320px;
+	margin-top: -820px;
+}
+
+.view0 {margin-left:0px;}
+.view1 {margin-left:0px;}
+.view2 {margin-left:-320px;} 
+.header_contnr{
+	height:40px;background:#CF2030;width:320px
+}

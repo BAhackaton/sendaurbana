@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>BiciSendaCiMO2012</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/base_s40.css" type="text/css" />
+    <meta name="Generator" content="Nokia WDE 3.5.0" />
+<script type="text/javascript" charset="UTF-8" src="http://api.maps.nokia.com/2.2.0/jsl.js"></script>
+ <script type="text/javascript">
+/*<![CDATA[*/	
+/////////////////////////////////////////////////////////////////////////////////////
+// Don't forget to set your API credentials
+//
+// Replace with your appId and token which you can obtain when you 
+// register on http://api.developer.nokia.com/ 
+//
+			nokia.Settings.set( "appId", "YOUR APP ID GOES HERE"); 
+			nokia.Settings.set( "authenticationToken", "YOUR AUTHENTICATION TOKEN GOES HERE");
+//			
+/////////////////////////////////////////////////////////////////////////////////////
+/*]]>*/         
+</script>
+ <script type="text/javascript">
+
+function showFullMap(){
+    var mapContainer = document.getElementById("mapContainer");
+    mapContainer.innerHTML = "";
+    // Create a map inside the map container DOM node
+    var map = new nokia.maps.map.Display(mapContainer, {
+        zoomLevel: 4, //zoom level for the map
+        center: [50.5,15.5], // center coordinates
+        components : [
+           new nokia.maps.map.component.ZoomBar(), 
+           new nokia.maps.map.component.Behavior(),
+           new nokia.maps.map.component.TypeSelector(),
+           new nokia.maps.map.component.Overview(),
+           new nokia.maps.map.component.ScaleBar()]                   
+    });
+ }
+ 
+ </script>
+
+<style type="text/css">
+
+#container {
+    position: relative;
+}
+
+#navi, 
+#infoi {
+	width: 149px;
+	height: 1px;
+	position: absolute;
+	top:17px;
+	left: 98px;
+}
+
+#infoi {
+    z-index: 10;
+}
+
+</style>
+
+  </head>
+
+  <body>
+
+    <div class="header_background">
+      <table summary="BiciSendas - Mapa" class="header_table" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="app_name">BiciSendas 1.0 - Mapa</td>
+          <td class="header_search"><a href="home.html"><img border="0" alt="Home" src="../../img/header_home.png"/></a></td>
+        </tr>
+      </table>
+    </div>
+
+	<div id="container">
+		<div id="mapContainer" class="navi" style="width:100%; height:100%;">
+		  <img src="http://m.nok.it/?c=50.5,15.5&amp;h=334&amp;w=540&amp;z=4&amp;nord&amp;nodot&amp;sb=k&amp;appId=YOUR APP ID GOES HERE&amp;token=YOUR AUTHENTICATION TOKEN GOES HERE" alt="Map of Europe" width="100%" height="100%" onclick="showFullMap();" />
+		</div>
+		<div id="infoi" align="center">
+			<input type="button" name="Nuevo Recorrido" value="Nuevo Recorrido" onclick="location.href='nuevo_recorrido.html';" style="background-color:#FFFF66"/>
+		</div> 
+	</div>
+
+  </body>
+
+</html>
